@@ -1,0 +1,25 @@
+@use '../base';
+
+.button {
+    border: none;
+    background-color: pink;
+    color: base.$primary-50;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 0.5rem 0.7rem 0.5rem 1.5rem;
+    border-radius: 3.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:after {
+        content: "";
+    }
+
+    img {
+        display: inline-block;
+        padding-left: 1rem;
+    }
+}

@@ -1,0 +1,66 @@
+@use './_colors.scss' as colors;
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem;
+}
+
+h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12.5rem;
+    line-height: 200px;
+    letter-spacing: -5px;
+}
+
+h2 {
+    color: colors.$secondary;
+    height: 68px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+h6 {
+    color: colors.$secondary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9375rem;
+    line-height: 1.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
