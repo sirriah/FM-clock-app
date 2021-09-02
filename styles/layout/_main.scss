@@ -1,0 +1,79 @@
+@use '../abstracts';
+
+main::before{
+  content: '';
+  
+  background-image: url("./../assets/mobile/bg-image-daytime.jpg");
+  background-size: cover;
+  background-color: hsl(0, 0%, 60%);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  position: fixed;
+  
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -1;
+
+  @include abstracts.breakpoint-up(medium) {
+    background-image: url("./../assets/tablet/bg-image-daytime.jpg");
+  }
+
+  @include abstracts.breakpoint-up(large) {
+    background-image: url("./../assets/desktop/bg-image-daytime.jpg");
+  }
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: static;
+  z-index: 3;
+}
+
+.wrapper_quote {
+  display: flex;
+  width: 100%;
+
+  @include abstracts.breakpoint-up(medium) {
+    max-width: 35.8125rem;
+  }
+}
+
+
+
+.quote {
+  display: flex;
+  flex-direction: column-reverse;
+
+  blockquote {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.time-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.timezone {
+  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  @include abstracts.breakpoint-up(medium) {
+    font-size: 2rem;
+    line-height: 1.75rem;
+  }
+  @include abstracts.breakpoint-up(large) {
+    font-size: 2.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+  }
+}

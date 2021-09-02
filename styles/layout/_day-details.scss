@@ -1,0 +1,15 @@
+@use '../base';
+
+.day-details{
+    background-color: rgba(255, 255, 255, 0.75);
+    
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+     div {
+        width: 50%;
+    }
+}

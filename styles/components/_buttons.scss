@@ -2,7 +2,7 @@
 
 .button {
     border: none;
-    background-color: pink;
+    background-color: base.$light;
     color: base.$primary-50;
     font-size: 1rem;
     line-height: 1.75rem;
@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    
 
     &:after {
         content: "";

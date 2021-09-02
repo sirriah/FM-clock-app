@@ -7,9 +7,25 @@ h1 {
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
-  font-size: 12.5rem;
-  line-height: 200px;
-  letter-spacing: -5px;
+  color: #ffffff;
+  margin-block: 1rem;
+  font-size: 100px;
+  line-height: 100px;
+  letter-spacing: -2.5px;
+}
+@media only screen and (min-width: 40em) {
+  h1 {
+    font-size: 175px;
+    line-height: 175px;
+    letter-spacing: -4.375px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  h1 {
+    font-size: 12.5rem;
+    line-height: 12.5rem;
+    letter-spacing: -5px;
+  }
 }
 
 h2 {
@@ -17,55 +33,170 @@ h2 {
   height: 68px;
   font-style: normal;
   font-weight: bold;
-  font-size: 3.5rem;
-  line-height: 4.25rem;
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (min-width: 40em) {
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  h2 {
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+  }
 }
 
 h3 {
   font-style: normal;
   font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  letter-spacing: 4.8px;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  color: #ffffff;
+  margin-block: 0;
+}
+@media only screen and (min-width: 40em) {
+  h3 {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 4.8px;
+  }
 }
 
 h4 {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  letter-spacing: 4px;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  color: #ffffff;
+  margin-block: 0;
+}
+@media only screen and (min-width: 40em) {
+  h4 {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: 4px;
+  }
 }
 
 h5 {
   font-style: normal;
   font-weight: bold;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 12px;
+  line-height: 22px;
+  color: #ffffff;
+}
+@media only screen and (min-width: 40em) {
+  h5 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 h6 {
   color: #303030;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.9375rem;
-  line-height: 1.75rem;
-  letter-spacing: 3px;
+  font-size: 10px;
+  line-height: 28px;
+  letter-spacing: 2px;
   text-transform: uppercase;
+}
+@media only screen and (min-width: 40em) {
+  h6 {
+    font-size: 13px;
+    line-height: 28px;
+    letter-spacing: 2.6px;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  h6 {
+    font-size: 0.9375rem;
+    line-height: 1.75rem;
+    letter-spacing: 3px;
+  }
 }
 
 p {
   font-style: normal;
-  font-weight: normal;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #ffffff;
+}
+@media only screen and (min-width: 40em) {
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+blockquote {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #ffffff;
+}
+@media only screen and (min-width: 40em) {
+  blockquote {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 2rem 1.5625rem 2.5rem;
+}
+@media only screen and (min-width: 40em) {
+  .container {
+    padding: 5rem 4rem 4rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .container {
+    padding: 3.5rem 10.3125rem 6.125rem;
+  }
 }
 
 .button {
   border: none;
-  background-color: pink;
+  background-color: #ffffff;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   line-height: 1.75rem;
@@ -83,6 +214,95 @@ p {
 .button img {
   display: inline-block;
   padding-left: 1rem;
+}
+
+main::before {
+  content: "";
+  background-image: url("./../assets/mobile/bg-image-daytime.jpg");
+  background-size: cover;
+  background-color: #999999;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+@media only screen and (min-width: 40em) {
+  main::before {
+    background-image: url("./../assets/tablet/bg-image-daytime.jpg");
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  main::before {
+    background-image: url("./../assets/desktop/bg-image-daytime.jpg");
+  }
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: static;
+  z-index: 3;
+}
+
+.wrapper_quote {
+  display: flex;
+  width: 100%;
+}
+@media only screen and (min-width: 40em) {
+  .wrapper_quote {
+    max-width: 35.8125rem;
+  }
+}
+
+.quote {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.quote blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+.time-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.timezone {
+  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+}
+@media only screen and (min-width: 40em) {
+  .timezone {
+    font-size: 2rem;
+    line-height: 1.75rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .timezone {
+    font-size: 2.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+  }
+}
+
+.day-details {
+  background-color: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.day-details div {
+  width: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */
