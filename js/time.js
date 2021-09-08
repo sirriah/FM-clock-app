@@ -13,7 +13,7 @@ const timeAbbr = document.getElementById("timezone-abbr");
 
 
 //fetching data
-fetch("http://worldtimeapi.org/api/ip")
+fetch("https://worldtimeapi.org/api/ip")
   .then((data) => data.json())
   .then((time) => parseDataTime(time))
   .catch((err) => console.log(err.message));
