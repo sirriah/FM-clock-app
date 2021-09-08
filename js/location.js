@@ -3,9 +3,12 @@ Location API
 */
 
 
-    fetch('https://freegeoip.app/json/')
-    .then(dataLocation => dataLocation.json())
-    .then(location = console.log(location))
-    .catch(err => console.log(err.message));
+fetch('https://reallyfreegeoip.org/json/')
+    .then((data) => data.json())
+    .then((d) = writeOutData(d))
+    .catch((error) => console.log(error.message));
 
 
+function writeOutData(locationData){
+    console.log(locationData);
+}

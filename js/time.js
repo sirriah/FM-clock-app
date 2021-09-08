@@ -16,7 +16,6 @@ const timeAbbr = document.getElementById("timezone-abbr");
 fetch("http://worldtimeapi.org/api/ip")
   .then((data) => data.json())
   .then((time) => parseDataTime(time))
-  .then(callLocation())
   .catch((err) => console.log(err.message));
 
 
@@ -52,4 +51,4 @@ function parseDataTime(time) {
   detailTimezone.innerHTML = timezone;
 }
 
-var clientIP;
+
