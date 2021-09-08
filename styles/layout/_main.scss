@@ -10,7 +10,6 @@ main::before{
   background-attachment: fixed;
   position: fixed;
   
-
   width: 100vw;
   height: 100vh;
 
@@ -54,6 +53,10 @@ main::before{
     padding: 0;
     margin: 0;
   }
+}
+
+.refresh{
+  margin-top: 8px;
 }
 
 .time-details {

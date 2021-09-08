@@ -26,12 +26,8 @@
       <div class="content container">
         <div class="wrapper_quote">
           <div class="quote">
-            <h5>Ada Lovelace</h5>
-            <blockquote>
-              “The science of operations, as derived from mathematics more
-              especially, is a science of itself, and has its own abstract truth
-              and value.”
-            </blockquote>
+            <h5 id="quote__author"></h5>
+            <blockquote id="quote__content"></blockquote>
           </div>
           <div>
             <img
@@ -39,6 +35,7 @@
               role="button"
               aria-label="refresh"
               class="refresh"
+              id="quote__button"
             />
           </div>
         </div>
@@ -51,9 +48,7 @@
               >Good morning, its currently
             </h4>
             <h1>
-              <time datetime="16:20"
-                >16:20<span class="timezone">BST</span></time
-              >
+              <time datetime="16:20" id="time"><span class="timezone" id="timezone-abbr"></span></time>
             </h1>
             <h3>In London, UK</h3>
           </div>
@@ -69,27 +64,31 @@
         <div>
           <div>
             <h6>Current Timezone</h6>
-            <h2>Europe/London</h2>
+            <h2 id="details__timezone"></h2>
           </div>
 
           <div>
             <h6>Day of the year</h6>
-            <h2>295</h2>
+            <h2 id="details__day-of-year"></h2>
           </div>
         </div>
 
         <div>
           <div>
             <h6>Day of the week</h6>
-            <h2>5</h2>
+            <h2 id="details__day-of-week"></h2>
           </div>
 
           <div>
             <h6>Week number</h6>
-            <h2>42</h2>
+            <h2 id="details__week-number"></h2>
           </div>
         </div>
       </div>
     </main>
+
+    <script src="./js/quote.js"></script>
+    <!-- <script src="./js/time.js"></script> -->
+    <script src="./js/location.js"></script>
   </body>
 </html>
