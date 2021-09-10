@@ -34,11 +34,11 @@ h1 {
 
 h2 {
   color: colors.$secondary;
-  height: 68px;
+ // height: 68px;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 20px;
 
   @include abstracts.breakpoint-up(medium) {
     font-size: 40px;
@@ -120,7 +120,8 @@ h6 {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
-  line-height: 28px;
+  margin-block: 0;
+  //line-height: 28px;
   letter-spacing: 2px;
   text-transform: uppercase;
 

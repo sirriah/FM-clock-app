@@ -36,7 +36,10 @@ main::before{
 
 .wrapper_quote {
   display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
   width: 100%;
+
 
   @include abstracts.breakpoint-up(medium) {
     max-width: 35.8125rem;
@@ -62,8 +65,14 @@ main::before{
 .time-details {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  
+
+  @include abstracts.breakpoint-up(medium) {
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-end;
+  }
 }
 
 .timezone {

@@ -1,18 +1,25 @@
 @use '../base';
+@use '../abstracts';
 
 .button {
     border: none;
     background-color: base.$light;
     color: base.$primary-50;
-    font-size: 1rem;
-    line-height: 1.75rem;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
     letter-spacing: 5px;
     text-transform: uppercase;
-    padding: 0.5rem 0.7rem 0.5rem 1.5rem;
+    padding: 0.25rem 0.25rem 0.25rem 1.0625rem;
     border-radius: 3.5rem;
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    @include abstracts.breakpoint-up(medium){
+        font-size: 1rem;
+        line-height: 1.75rem;
+        padding: 0.5rem 0.7rem 0.5rem 1.5rem;
+    }
     
 
     &:after {
@@ -20,7 +27,16 @@
     }
 
     img {
+        box-sizing: content-box;
         display: inline-block;
-        padding-left: 1rem;
+        padding-left: 0.9375rem;
+        width: 2rem;
+        height: 2rem;
+
+        @include abstracts.breakpoint-up(medium) {
+           width:  2.5rem;
+           height: 2.5rem;
+           padding-left: 1rem;
+        }
     }
 }

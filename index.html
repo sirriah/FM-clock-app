@@ -42,7 +42,7 @@
 
         <div class="time-details">
           <div>
-            <h4 class="greeting">
+            <h4 class="time-details__greeting" id="greeting">
               <span class="icon"
                 ><img src="./assets/desktop/icon-sun.svg" alt="" /></span
               >Good morning, its currently
@@ -50,7 +50,7 @@
             <h1>
               <time datetime="16:20" id="time"><span class="timezone" id="timezone-abbr"></span></time>
             </h1>
-            <h3>In London, UK</h3>
+            <h3 id="locationCity">In London, UK</h3>
           </div>
           <div>
             <button class="button">
@@ -62,24 +62,24 @@
 
       <div class="day-details container">
         <div>
-          <div>
+          <div class="day-details__item">
             <h6>Current Timezone</h6>
             <h2 id="details__timezone"></h2>
           </div>
 
-          <div>
+          <div class="day-details__item">
             <h6>Day of the year</h6>
             <h2 id="details__day-of-year"></h2>
           </div>
         </div>
 
         <div>
-          <div>
+          <div class="day-details__item">
             <h6>Day of the week</h6>
             <h2 id="details__day-of-week"></h2>
           </div>
 
-          <div>
+          <div class="day-details__item">
             <h6>Week number</h6>
             <h2 id="details__week-number"></h2>
           </div>
