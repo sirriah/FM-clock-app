@@ -17,3 +17,6 @@
 .prettierignore
 
 node_modules
+
+.eslintrc.json
+
