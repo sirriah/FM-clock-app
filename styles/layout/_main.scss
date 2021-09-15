@@ -1,26 +1,26 @@
-@use '../abstracts';
+@use "../abstracts";
 
-main::before{
-  content: '';
-  
-  background-image: url("./../assets/mobile/bg-image-daytime.jpg");
+main::before {
+  content: "";
+
+ // background-image: url("./../assets/mobile/bg-image-daytime.jpg");
   background-size: cover;
   background-color: hsl(0, 0%, 60%);
   background-blend-mode: multiply;
   background-attachment: fixed;
   position: fixed;
-  
+
   width: 100vw;
   height: 100vh;
 
   z-index: -1;
 
   @include abstracts.breakpoint-up(medium) {
-    background-image: url("./../assets/tablet/bg-image-daytime.jpg");
+    //background-image: url("./../assets/tablet/bg-image-daytime.jpg");
   }
 
   @include abstracts.breakpoint-up(large) {
-    background-image: url("./../assets/desktop/bg-image-daytime.jpg");
+    //background-image: url("./../assets/desktop/bg-image-daytime.jpg");
   }
 }
 
@@ -40,13 +40,10 @@ main::before{
   gap: 1.5rem;
   width: 100%;
 
-
   @include abstracts.breakpoint-up(medium) {
     max-width: 35.8125rem;
   }
 }
-
-
 
 .quote {
   display: flex;
@@ -58,20 +55,38 @@ main::before{
   }
 }
 
-.refresh{
-  margin-top: 8px;
+.refresh {
+  background-color: transparent;
+  border: none;
+  margin-top: 0.5rem;
 }
 
 .time-details {
   width: 100%;
   display: flex;
   flex-direction: column;
-  
+  gap: 3rem;
 
   @include abstracts.breakpoint-up(medium) {
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: flex-end;
+    gap: 5rem;
+  }
+
+  @include abstracts.breakpoint-up(large) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0;
+  }
+
+  &__greeting {
+    display: inline-block;
+
+    &:before {
+      content: url("./../assets/desktop/icon-sun.svg");
+      margin-right: 0.6rem;
+      vertical-align: middle;
+      display: inline-block;
+    }
   }
 }
 
@@ -79,6 +94,8 @@ main::before{
   font-weight: 300;
   font-size: 0.9375rem;
   line-height: 1.75rem;
+  letter-spacing: 0;
+  padding-left: 1rem;
   @include abstracts.breakpoint-up(medium) {
     font-size: 2rem;
     line-height: 1.75rem;

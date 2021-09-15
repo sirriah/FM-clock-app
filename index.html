@@ -21,7 +21,7 @@
     <title>Frontend Mentor | Clock App</title>
   </head>
   <body>
-    <main>
+    <main class="day" id="main">
   
       <div class="content container">
         <div class="wrapper_quote">
@@ -30,38 +30,37 @@
             <blockquote id="quote__content"></blockquote>
           </div>
           <div>
-            <img
-              src="./assets/desktop/icon-refresh.svg"
-              role="button"
-              aria-label="refresh"
-              class="refresh"
-              id="quote__button"
-            />
+            <button id="quote__button" class="refresh">
+              <img
+                src="./assets/desktop/icon-refresh.svg"
+                role="button"
+                aria-label="refresh"
+              />
+            </button>
           </div>
+          
         </div>
 
         <div class="time-details">
           <div>
             <h4 class="time-details__greeting" id="greeting">
-              <span class="icon"
-                ><img src="./assets/desktop/icon-sun.svg" alt="" /></span
-              >Good morning, its currently
+              Good morning<span class="large-only">, its currently</span>
             </h4>
             <h1>
-              <time datetime="16:20" id="time"><span class="timezone" id="timezone-abbr"></span></time>
+              <time datetime="" id="time"><span class="timezone" id="timezone-abbr"></span></time>
             </h1>
             <h3 id="locationCity">In London, UK</h3>
           </div>
           <div>
-            <button class="button">
+            <button class="button" id="buttonMore">
               More <img src="./assets/desktop/icon-arrow-up.svg" alt="" />
             </button>
           </div>
         </div>
       </div>
 
-      <div class="day-details container">
-        <div>
+      <div class="day-details container" id="day_details">
+        <div class="day-details__column">
           <div class="day-details__item">
             <h6>Current Timezone</h6>
             <h2 id="details__timezone"></h2>
@@ -69,11 +68,11 @@
 
           <div class="day-details__item">
             <h6>Day of the year</h6>
-            <h2 id="details__day-of-year"></h2>
+            <h2 id="details__day-of-year" class="no-margin"></h2>
           </div>
         </div>
 
-        <div>
+        <div class="day-details__column">
           <div class="day-details__item">
             <h6>Day of the week</h6>
             <h2 id="details__day-of-week"></h2>
@@ -81,7 +80,7 @@
 
           <div class="day-details__item">
             <h6>Week number</h6>
-            <h2 id="details__week-number"></h2>
+            <h2 id="details__week-number" class="no-margin"></h2>
           </div>
         </div>
       </div>
@@ -90,5 +89,6 @@
     <script src="./js/quote.js"></script>
     <script src="./js/time.js"></script>
     <script src="./js/location.js"></script>
+    <script src="./js/buttonListener.js"></script>
   </body>
 </html>

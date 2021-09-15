@@ -1,12 +1,73 @@
-
 $breakpoints: (
-    "medium" : 40em, // 640px
-    "large" : 67.5em, // 1080px
-    "xlarge" : 90em, // 1440px
+    "medium": 40em,
+    // 800px // 640px = 40rem
+    "large": 67.5em,
+    // 1080px
+    "xlarge": 90em,
+    // 1440px
 );
 
 @mixin breakpoint-up($break) {
     @media only screen and (min-width: map-get($breakpoints, $break)) {
         @content;
+    }
+}
+
+/*
+ color themes  https://medium.com/@sanuthadathil/theme-and-color-scheme-sass-way-a62d68614ef3
+ each sass  https://sass-lang.com/documentation/at-rules/control/each
+ mixin theme  https://www.sassmeister.com/gist/9342576
+ mixin maps theme https://www.sitepoint.com/dealing-color-schemes-sass/
+*/
+
+$themes: (
+    "day": (
+        url("./../assets/mobile/bg-image-daytime.jpg") url("./../assets/tablet/bg-image-daytime.jpg")
+            url("./../assets/desktop/bg-image-daytime.jpg") rgb(48, 48, 48) rgba(255, 255, 255, 0.75) rgba(48, 48, 48, 0.25),
+    ),
+    "night": (
+        url("./../assets/mobile/bg-image-nighttime.jpg") url("./../assets/tablet/bg-image-nighttime.jpg")
+            url("./../assets/desktop/bg-image-nighttime.jpg") rgb(255, 255, 255) rgba(0, 0, 0, 0.75) rgba(255, 255, 255, 0.25),
+    ),
+) !default;
+
+@mixin tema($theme, $smallImage, $mediumImage, $largeImage, $fontColor, $backgroundColor, $borderColor) {
+    main.#{$theme}::before {
+        background-image: $smallImage;
+
+        @include breakpoint-up(medium) {
+            background-image: $mediumImage;
+        }
+        @include breakpoint-up(large) {
+            background-image: $largeImage;
+        }
+    }
+
+    .#{$theme} {
+        h2,
+        h6 {
+            color: $fontColor;
+        }
+
+        .day-details {
+            background-color: $backgroundColor;
+        }
+
+        .day-details__column {
+            justify-content: flex-start;
+    
+            @include breakpoint-up(large) {
+                &:first-child {
+                    border-right: 1px solid $borderColor;
+                    padding-right: 5.875rem;
+                }
+            }
+        }
+    }
+}
+
+@each $theme, $map in $themes {
+    @each $smallImage, $mediumImage, $largeImage, $fontColor, $backgroundColor, $borderColor in $map {
+        @include tema($theme, $smallImage, $mediumImage, $largeImage, $fontColor, $backgroundColor, $borderColor);
     }
 }

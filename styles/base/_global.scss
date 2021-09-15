@@ -1,23 +1,32 @@
-@use '../abstracts';
+@use "../abstracts";
 
-*{
+* {
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     padding: 0;
     margin: 0;
-    
+    scroll-behavior: smooth;
 }
 
-.container{
+.container {
     padding: 2rem 1.5625rem 2.5rem;
 
-    @include abstracts.breakpoint-up(medium){
+    @include abstracts.breakpoint-up(medium) {
         padding: 5rem 4rem 4rem;
     }
 
-    @include abstracts.breakpoint-up(large){
+    @include abstracts.breakpoint-up(large) {
         padding: 3.5rem 10.3125rem 6.125rem;
+    }
+}
+
+.large-only {
+    display: none;
+
+    @include abstracts.breakpoint-up(medium){
+        display: inline-block;
     }
 }

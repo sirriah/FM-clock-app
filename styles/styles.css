@@ -1,6 +1,75 @@
+/*
+ color themes  https://medium.com/@sanuthadathil/theme-and-color-scheme-sass-way-a62d68614ef3
+ each sass  https://sass-lang.com/documentation/at-rules/control/each
+ mixin theme  https://www.sassmeister.com/gist/9342576
+ mixin maps theme https://www.sitepoint.com/dealing-color-schemes-sass/
+*/
+main.day::before {
+  background-image: url("./../assets/mobile/bg-image-daytime.jpg");
+}
+@media only screen and (min-width: 40em) {
+  main.day::before {
+    background-image: url("./../assets/tablet/bg-image-daytime.jpg");
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  main.day::before {
+    background-image: url("./../assets/desktop/bg-image-daytime.jpg");
+  }
+}
+
+.day h2,
+.day h6 {
+  color: #303030;
+}
+.day .day-details {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.day .day-details__column {
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 67.5em) {
+  .day .day-details__column:first-child {
+    border-right: 1px solid rgba(48, 48, 48, 0.25);
+    padding-right: 5.875rem;
+  }
+}
+
+main.night::before {
+  background-image: url("./../assets/mobile/bg-image-nighttime.jpg");
+}
+@media only screen and (min-width: 40em) {
+  main.night::before {
+    background-image: url("./../assets/tablet/bg-image-nighttime.jpg");
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  main.night::before {
+    background-image: url("./../assets/desktop/bg-image-nighttime.jpg");
+  }
+}
+
+.night h2,
+.night h6 {
+  color: white;
+}
+.night .day-details {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.night .day-details__column {
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 67.5em) {
+  .night .day-details__column:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    padding-right: 5.875rem;
+  }
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.125rem;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -29,7 +98,6 @@ h1 {
 }
 
 h2 {
-  color: #303030;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -119,7 +187,6 @@ h5 {
 }
 
 h6 {
-  color: #303030;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -174,9 +241,11 @@ blockquote {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -190,6 +259,15 @@ html, body {
 @media only screen and (min-width: 67.5em) {
   .container {
     padding: 3.5rem 10.3125rem 6.125rem;
+  }
+}
+
+.large-only {
+  display: none;
+}
+@media only screen and (min-width: 40em) {
+  .large-only {
+    display: inline-block;
   }
 }
 
@@ -234,7 +312,6 @@ html, body {
 
 main::before {
   content: "";
-  background-image: url("./../assets/mobile/bg-image-daytime.jpg");
   background-size: cover;
   background-color: #999999;
   background-blend-mode: multiply;
@@ -244,17 +321,6 @@ main::before {
   height: 100vh;
   z-index: -1;
 }
-@media only screen and (min-width: 40em) {
-  main::before {
-    background-image: url("./../assets/tablet/bg-image-daytime.jpg");
-  }
-}
-@media only screen and (min-width: 67.5em) {
-  main::before {
-    background-image: url("./../assets/desktop/bg-image-daytime.jpg");
-  }
-}
-
 .content {
   width: 100vw;
   height: 100vh;
@@ -287,26 +353,46 @@ main::before {
 }
 
 .refresh {
-  margin-top: 8px;
+  background-color: transparent;
+  border: none;
+  margin-top: 0.5rem;
 }
 
 .time-details {
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 @media only screen and (min-width: 40em) {
+  .time-details {
+    gap: 5rem;
+  }
+}
+@media only screen and (min-width: 67.5em) {
   .time-details {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 0;
   }
+}
+.time-details__greeting {
+  display: inline-block;
+}
+.time-details__greeting:before {
+  content: url("./../assets/desktop/icon-sun.svg");
+  margin-right: 0.6rem;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .timezone {
   font-weight: 300;
   font-size: 0.9375rem;
   line-height: 1.75rem;
+  letter-spacing: 0;
+  padding-left: 1rem;
 }
 @media only screen and (min-width: 40em) {
   .timezone {
@@ -323,7 +409,6 @@ main::before {
 }
 
 .day-details {
-  background-color: rgba(255, 255, 255, 0.75);
   position: absolute;
   width: 100%;
   display: flex;
@@ -333,14 +418,8 @@ main::before {
 @media only screen and (min-width: 40em) {
   .day-details {
     flex-direction: row;
-  }
-}
-.day-details div {
-  width: 100%;
-}
-@media only screen and (min-width: 40em) {
-  .day-details div {
-    width: 50%;
+    justify-content: flex-start;
+    gap: 5.875rem;
   }
 }
 .day-details__item {
@@ -352,7 +431,11 @@ main::before {
 @media only screen and (min-width: 40em) {
   .day-details__item {
     flex-direction: column;
+    align-items: flex-start;
   }
+}
+.day-details .no-margin {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

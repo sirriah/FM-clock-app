@@ -1,9 +1,9 @@
-@use '../base';
-@use '../abstracts';
+@use "../base";
+@use "../abstracts";
 
-.day-details{
-    background-color: rgba(255, 255, 255, 0.75);
-    
+.day-details {
+    // background-color: rgba(255, 255, 255, 0.75);
+
     position: absolute;
     width: 100%;
 
@@ -11,27 +11,27 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include abstracts.breakpoint-up(medium){
+    @include abstracts.breakpoint-up(medium) {
         flex-direction: row;
+        justify-content: flex-start;
+        gap: 5.875rem; 
     }
 
-     div {
-        width: 100%;
+    
 
-        @include abstracts.breakpoint-up(medium){
-            width: 50%;  
-        }
-    }
-
-    &__item{
+    &__item {
         display: flex;
         flex-direction: row;
-        //align-items: center;
+        align-items: center;
         justify-content: space-between;
-        
 
         @include abstracts.breakpoint-up(medium) {
             flex-direction: column;
+            align-items: flex-start;
         }
+    }
+
+    .no-margin {
+        margin-bottom: 0;
     }
 }
