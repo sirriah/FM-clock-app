@@ -1,5 +1,5 @@
-@use './_colors.scss' as colors;
-@use '../abstracts';
+@use "./_colors.scss" as colors;
+@use "../abstracts";
 
 body {
   font-family: "Inter", sans-serif;
@@ -14,13 +14,13 @@ h1 {
   color: colors.$light;
   margin-block: 1rem;
 
-  font-size: 100px;
-  line-height: 100px;
+  font-size: 6.25rem;
+  line-height: 6.25rem;
   letter-spacing: -2.5px;
 
   @include abstracts.breakpoint-up(medium) {
-    font-size: 175px; //175px
-    line-height: 175px;
+    font-size: 10.9375; //175px
+    line-height: 10.9375;
     letter-spacing: -4.375px;
   }
 
@@ -28,21 +28,18 @@ h1 {
     font-size: 12.5rem;
     line-height: 12.5rem;
     letter-spacing: -5px;
-    
-
   }
 }
 
 h2 {
-  //color: colors.$secondary;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 
   @include abstracts.breakpoint-up(medium) {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 
   @include abstracts.breakpoint-up(large) {
@@ -62,8 +59,8 @@ h3 {
   margin-block: 0;
 
   @include abstracts.breakpoint-up(medium) {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
     letter-spacing: 3.6px;
   }
 
@@ -77,16 +74,16 @@ h3 {
 h4 {
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: colors.$light;
   margin-block: 0;
 
   @include abstracts.breakpoint-up(medium) {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
     letter-spacing: 3.6px;
   }
 
@@ -100,13 +97,13 @@ h4 {
 h5 {
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
   color: colors.$light;
 
   @include abstracts.breakpoint-up(medium) {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   @include abstracts.breakpoint-up(large) {
@@ -116,12 +113,10 @@ h5 {
 }
 
 h6 {
-  //color: colors.$secondary;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
   margin-block: 0;
-  //line-height: 28px;
   letter-spacing: 2px;
   text-transform: uppercase;
 
@@ -151,16 +146,15 @@ p {
   }
 }
 
-blockquote{
+blockquote {
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.375rem;
-    color: colors.$light;
-    
-    @include abstracts.breakpoint-up(medium) {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
+  color: colors.$light;
 
+  @include abstracts.breakpoint-up(medium) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }

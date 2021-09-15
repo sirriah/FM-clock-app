@@ -1,27 +1,19 @@
 @use "../abstracts";
+/*
+Home page of the web
+*/
 
+// background image settings
 main::before {
   content: "";
-
- // background-image: url("./../assets/mobile/bg-image-daytime.jpg");
   background-size: cover;
   background-color: hsl(0, 0%, 60%);
   background-blend-mode: multiply;
   background-attachment: fixed;
   position: fixed;
-
   width: 100vw;
   height: 100vh;
-
   z-index: -1;
-
-  @include abstracts.breakpoint-up(medium) {
-    //background-image: url("./../assets/tablet/bg-image-daytime.jpg");
-  }
-
-  @include abstracts.breakpoint-up(large) {
-    //background-image: url("./../assets/desktop/bg-image-daytime.jpg");
-  }
 }
 
 .content {
@@ -55,6 +47,7 @@ main::before {
   }
 }
 
+// refresh button for the quote
 .refresh {
   background-color: transparent;
   border: none;

@@ -22,7 +22,6 @@
   </head>
   <body>
     <main class="day" id="main">
-  
       <div class="content container">
         <div class="wrapper_quote">
           <div class="quote">
@@ -31,14 +30,9 @@
           </div>
           <div>
             <button id="quote__button" class="refresh">
-              <img
-                src="./assets/desktop/icon-refresh.svg"
-                role="button"
-                aria-label="refresh"
-              />
+              <img src="./assets/desktop/icon-refresh.svg" alt="refresh" />
             </button>
           </div>
-          
         </div>
 
         <div class="time-details">
@@ -47,12 +41,14 @@
               Good morning<span class="large-only">, its currently</span>
             </h4>
             <h1>
-              <time datetime="" id="time"><span class="timezone" id="timezone-abbr"></span></time>
+              <time datetime="" id="time"
+                >00:00<span class="timezone" id="timezone-abbr"></span
+              ></time>
             </h1>
             <h3 id="locationCity">In London, UK</h3>
           </div>
           <div>
-            <button class="button" id="buttonMore">
+            <button class="button rotation" id="buttonMore">
               More <img src="./assets/desktop/icon-arrow-up.svg" alt="" />
             </button>
           </div>

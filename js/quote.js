@@ -1,3 +1,7 @@
+/*
+Api Quotable - returns the quotes
+*/
+
 // the elements from the index.html
 const authorQuote = document.getElementById('quote__author');
 const contentQuote = document.getElementById('quote__content');

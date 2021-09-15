@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
+
 /*
 World Time API
 */
@@ -39,6 +40,10 @@ const setStyle = (currentDate) => {
 };
 
 // live time
+/*
+this is made with the Date object, not with the API time
+It is build as live clocks and API method is really slow
+*/
 const actualTimer = () => {
   const actualTime = new Date();
   const hours = actualTime.getHours().toString();
@@ -50,8 +55,7 @@ const actualTimer = () => {
   setTimeout(actualTimer, 60000);
 };
 
-// fetching data
-
+// parsing fetched data
 function parseDataTime(time) {
 // destructuring the fetched object
   const {
@@ -63,13 +67,14 @@ function parseDataTime(time) {
     timezone,
   } = time;
 
+  // abbr is global because it is used in the actualTimer()
   abbreviationGlobal = abbreviation;
 
   // re-format the date object
   setStyle(new Date(datetime));
 
   // live time
-  actualTimer(new Date(datetime));
+  actualTimer(new Date());
 
   // filling the elements with data
   detailDayOfWeek.innerHTML = day_of_week;
@@ -78,6 +83,7 @@ function parseDataTime(time) {
   detailTimezone.innerHTML = timezone;
 }
 
+// fetching data
 fetch('https://worldtimeapi.org/api/ip')
   .then((data) => data.json())
   .then((time) => parseDataTime(time))

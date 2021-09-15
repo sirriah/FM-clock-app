@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 /*
 Location API
+this Api sets the location, which is displayed under the time
 */
 
 const locationCity = document.getElementById('locationCity');

@@ -1,6 +1,10 @@
+/*
+Media queries mixin
+*/
+
 $breakpoints: (
     "medium": 40em,
-    // 800px // 640px = 40rem
+    // 640px
     "large": 67.5em,
     // 1080px
     "xlarge": 90em,
@@ -14,12 +18,14 @@ $breakpoints: (
 }
 
 /*
+Color themes for the Day and Night theme
  color themes  https://medium.com/@sanuthadathil/theme-and-color-scheme-sass-way-a62d68614ef3
  each sass  https://sass-lang.com/documentation/at-rules/control/each
  mixin theme  https://www.sassmeister.com/gist/9342576
  mixin maps theme https://www.sitepoint.com/dealing-color-schemes-sass/
 */
 
+// these are lists of css values for the "day" and "night theme"
 $themes: (
     "day": (
         url("./../assets/mobile/bg-image-daytime.jpg") url("./../assets/tablet/bg-image-daytime.jpg")
@@ -31,6 +37,7 @@ $themes: (
     ),
 ) !default;
 
+// this is the mixin where the values are joined with the properties
 @mixin tema($theme, $smallImage, $mediumImage, $largeImage, $fontColor, $backgroundColor, $borderColor) {
     main.#{$theme}::before {
         background-image: $smallImage;
@@ -66,6 +73,7 @@ $themes: (
     }
 }
 
+// the cycle where the lists are destructured into the variables
 @each $theme, $map in $themes {
     @each $smallImage, $mediumImage, $largeImage, $fontColor, $backgroundColor, $borderColor in $map {
         @include tema($theme, $smallImage, $mediumImage, $largeImage, $fontColor, $backgroundColor, $borderColor);
