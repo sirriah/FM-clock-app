@@ -52,6 +52,11 @@ main::before {
   background-color: transparent;
   border: none;
   margin-top: 0.5rem;
+  cursor: pointer;
+
+  &:hover .refresh__icon{
+    opacity: 1;
+  }
 }
 
 .time-details {

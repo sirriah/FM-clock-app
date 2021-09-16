@@ -27,6 +27,8 @@
     }
 
     .no-margin {
+        @include abstracts.breakpoint-up(medium) {
         margin-bottom: 0;
+        }
     }
 }
