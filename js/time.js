@@ -51,7 +51,7 @@ const actualTimer = () => {
   // This add the zero before minute value if it is onedigit
   minutes = minutes.length === 1 ? 0 + minutes : minutes;
   // the time object literal, because it contains the abbr
-  timeDigital.innerHTML = `<time datetime="${hours}:${minutes}" id="time">${hours}:${minutes}<span class="timezone" id="timezone-abbr">${abbreviationGlobal}</span></time>`;
+  timeDigital.innerHTML = `<time datetime="${hours}:${minutes}">${hours}:${minutes}<span class="timezone" id="timezone-abbr">${abbreviationGlobal}</span></time>`;
   setTimeout(actualTimer, 60000);
 };
 
