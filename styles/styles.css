@@ -297,7 +297,13 @@ body {
     padding: 0.5rem 0.7rem 0.5rem 1.5rem;
   }
 }
-.button img {
+.button circle {
+  transition: 150ms all;
+}
+.button:hover circle {
+  fill: #999999;
+}
+.button svg {
   box-sizing: content-box;
   display: inline-block;
   width: 2rem;
@@ -305,7 +311,7 @@ body {
   padding-left: 0.9375rem;
 }
 @media only screen and (min-width: 40em) {
-  .button img {
+  .button svg {
     width: 2.5rem;
     height: 2.5rem;
     padding-left: 1rem;
@@ -316,7 +322,7 @@ button:focus {
   border: white 2px dashed;
 }
 
-.rotation img {
+.rotation svg {
   transform: rotate(180deg);
   padding-right: 0.9375rem;
   padding-left: 0;

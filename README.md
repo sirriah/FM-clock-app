@@ -61,7 +61,7 @@ This is what is written in the propositions:
 - [Programming Quotes API](https://programming-quotes-api.herokuapp.com/) to generate random programming quotes.
     - If the Programming Quotes API doesn't work, [here's a good alternative quote API](https://github.com/lukePeavey/quotable) you can use instead. It's not programming specific, but it will do the trick.
 
-The hardest part for me was the scroll event. The "days details" section is visible with the button action and after the scrolling too. If user scrolls at the bottom of the page, the button change itself from "more" to the "less". The hardest part for me was to inspect which scroll function returns the right values.
+The hardest part for me was the scroll event. The "day details" section is visible with the button action and after the scrolling too. If user scrolls at the bottom of the page, the button change itself from "more" to the "less". The hardest part for me was to inspect which scroll function returns the right values.
 
 ```js
 if (document.documentElement.scrollHeight === window.pageYOffset + window.innerHeight) {

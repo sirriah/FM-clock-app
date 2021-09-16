@@ -15,13 +15,22 @@
     align-items: center;
     cursor: pointer;
 
+
     @include abstracts.breakpoint-up(medium) {
         font-size: 1rem;
         line-height: 1.75rem;
         padding: 0.5rem 0.7rem 0.5rem 1.5rem;
     }
 
-    img {
+    circle {
+        transition: 150ms all;
+    }
+
+    &:hover circle{
+        fill: #999999;
+    }
+
+    svg {
         box-sizing: content-box;
         display: inline-block;
         width: 2rem;
@@ -40,8 +49,10 @@ button:focus {
     border: white 2px dashed;
 }
 
+
+
 //class for the rotation of arrow
-.rotation img {
+.rotation svg {
     transform: rotate(180deg);
     padding-right: 0.9375rem;
     padding-left: 0;
