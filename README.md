@@ -6,7 +6,6 @@ This is a solution to the [Clock app challenge on Frontend Mentor](https://www.f
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -29,14 +28,9 @@ Users should be able to:
 - Be shown the correct greeting and background image based on the time of day they're visiting the site
 - Generate random programming quotes by clicking the refresh icon near the quote
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontendmentor.io](https://www.frontendmentor.io/solutions/clock-app-scss-flexbox-js-spgTo74dQ)
 - Live Site URL: [Vercel link](https://fm-clock-app-blond.vercel.app/)
 
 ## My process
