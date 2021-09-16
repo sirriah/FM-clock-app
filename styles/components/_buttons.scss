@@ -22,15 +22,9 @@
         padding: 0.5rem 0.7rem 0.5rem 1.5rem;
     }
 
-    circle {
-        transition: 150ms all;
-    }
 
-    &:hover circle{
-        fill: #999999;
-    }
-
-    svg {
+   
+    img {
         box-sizing: content-box;
         display: inline-block;
         width: 2rem;
@@ -43,6 +37,11 @@
             padding-left: 1rem;
         }
     }
+
+    &:hover img{
+        opacity: 0.5;
+    }
+
 }
 
 button:focus {
@@ -52,7 +51,7 @@ button:focus {
 
 
 //class for the rotation of arrow
-.rotation svg {
+.rotation img {
     transform: rotate(180deg);
     padding-right: 0.9375rem;
     padding-left: 0;
