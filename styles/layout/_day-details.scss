@@ -2,7 +2,7 @@
 @use "../abstracts";
 
 .day-details {
-    position: absolute;
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
