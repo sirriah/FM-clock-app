@@ -333,7 +333,6 @@ main::before {
   background-size: cover;
   background-color: #999999;
   background-blend-mode: multiply;
-  background-attachment: fixed;
   position: fixed;
   width: 100vw;
   height: 100vh;
