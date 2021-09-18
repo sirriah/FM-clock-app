@@ -22,8 +22,8 @@ main.day::before {
   }
 }
 
-.day h2,
-.day h6 {
+.day .h2-style,
+.day .h6-style {
   color: #303030;
 }
 .day .day-details {
@@ -53,8 +53,8 @@ main.night::before {
   }
 }
 
-.night h2,
-.night h6 {
+.night .h2-style,
+.night .h6-style {
   color: white;
 }
 .night .day-details {
@@ -76,7 +76,7 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
+.h1-style {
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
@@ -87,40 +87,41 @@ h1 {
   letter-spacing: -2.5px;
 }
 @media only screen and (min-width: 40em) {
-  h1 {
+  .h1-style {
     font-size: 10.9375rem;
     line-height: 10.9375rem;
     letter-spacing: -4.375px;
   }
 }
 @media only screen and (min-width: 67.5em) {
-  h1 {
+  .h1-style {
     font-size: 12.5rem;
     line-height: 12.5rem;
     letter-spacing: -5px;
   }
 }
 
-h2 {
+.h2-style {
   font-style: normal;
   font-weight: bold;
   font-size: 1.25rem;
   line-height: 1.25rem;
+  margin-top: 0.5rem;
 }
 @media only screen and (min-width: 40em) {
-  h2 {
+  .h2-style {
     font-size: 2.5rem;
     line-height: 3rem;
   }
 }
 @media only screen and (min-width: 67.5em) {
-  h2 {
+  .h2-style {
     font-size: 3.5rem;
     line-height: 4.25rem;
   }
 }
 
-h3 {
+.h3-style {
   font-style: normal;
   font-weight: bold;
   font-size: 15px;
@@ -131,21 +132,21 @@ h3 {
   margin-block: 0;
 }
 @media only screen and (min-width: 40em) {
-  h3 {
+  .h3-style {
     font-size: 1.125rem;
     line-height: 1.75rem;
     letter-spacing: 3.6px;
   }
 }
 @media only screen and (min-width: 67.5em) {
-  h3 {
+  .h3-style {
     font-size: 1.5rem;
     line-height: 1.75rem;
     letter-spacing: 4.8px;
   }
 }
 
-h4 {
+.h4-style {
   font-style: normal;
   font-weight: normal;
   font-size: 0.9375rem;
@@ -156,21 +157,21 @@ h4 {
   margin-block: 0;
 }
 @media only screen and (min-width: 40em) {
-  h4 {
+  .h4-style {
     font-size: 1.125rem;
     line-height: 1.75rem;
     letter-spacing: 3.6px;
   }
 }
 @media only screen and (min-width: 67.5em) {
-  h4 {
+  .h4-style {
     font-size: 1.25rem;
     line-height: 1.75rem;
     letter-spacing: 4px;
   }
 }
 
-h5 {
+.h5-style {
   font-style: normal;
   font-weight: bold;
   font-size: 0.75rem;
@@ -178,19 +179,19 @@ h5 {
   color: #ffffff;
 }
 @media only screen and (min-width: 40em) {
-  h5 {
+  .h5-style {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
 @media only screen and (min-width: 67.5em) {
-  h5 {
+  .h5-style {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
 
-h6 {
+.h6-style {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -199,14 +200,14 @@ h6 {
   text-transform: uppercase;
 }
 @media only screen and (min-width: 40em) {
-  h6 {
+  .h6-style {
     font-size: 13px;
     line-height: 28px;
     letter-spacing: 2.6px;
   }
 }
 @media only screen and (min-width: 67.5em) {
-  h6 {
+  .h6-style {
     font-size: 0.9375rem;
     line-height: 1.75rem;
     letter-spacing: 3px;
@@ -334,14 +335,14 @@ main::before {
   background-color: #999999;
   background-blend-mode: multiply;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   z-index: -1;
 }
 
 .content {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

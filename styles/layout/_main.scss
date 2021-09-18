@@ -9,21 +9,21 @@ main::before {
   background-size: cover;
   background-color: hsl(0, 0%, 60%);
   background-blend-mode: multiply;
-  // background-attachment: fixed;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   z-index: -1;
 }
 
 .content {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: static;
   z-index: 3;
+  
 }
 
 .wrapper_quote {

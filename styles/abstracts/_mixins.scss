@@ -51,8 +51,8 @@ $themes: (
     }
 
     .#{$theme} {
-        h2,
-        h6 {
+        .h2-style,
+        .h6-style {
             color: $fontColor;
         }
 
