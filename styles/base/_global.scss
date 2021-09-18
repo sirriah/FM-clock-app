@@ -27,7 +27,20 @@ body {
 .large-only {
     display: none;
 
-    @include abstracts.breakpoint-up(medium){
+    @include abstracts.breakpoint-up(medium) {
         display: inline-block;
     }
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
