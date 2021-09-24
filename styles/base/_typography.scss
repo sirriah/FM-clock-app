@@ -13,8 +13,8 @@ body {
   font-weight: bold;
   color: colors.$light;
   margin-block: 1rem;
-  
-  font-size: 6.25rem;
+  font-size: clamp(4rem, 43vw, 6.25rem);
+ // font-size: 6.25rem;
   line-height: 6.25rem;
   letter-spacing: -2.5px;
 
@@ -29,6 +29,7 @@ body {
     line-height: 12.5rem;
     letter-spacing: -5px;
   }
+
 }
 
 .h2-style {

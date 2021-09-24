@@ -51,7 +51,7 @@ const actualTimer = () => {
   // This add the zero before minute value if it is onedigit
   minutes = minutes.length === 1 ? 0 + minutes : minutes;
   // the time object literal, because it contains the abbr
-  timeDigital.innerHTML = `<time datetime="${hours}:${minutes}">${hours}:${minutes}<span class="timezone" id="timezone-abbr">${abbreviationGlobal}</span></time>`;
+  timeDigital.innerHTML = `<time class="time" datetime="${hours}:${minutes}">${hours}:${minutes}<span class="timezone" id="timezone-abbr">${abbreviationGlobal}</span></time>`;
   setTimeout(actualTimer, 60000);
 };
 
@@ -80,7 +80,7 @@ function parseDataTime(time) {
   detailDayOfWeek.innerHTML = day_of_week;
   detailDayOfYear.innerHTML = day_of_year;
   detailWeekNumber.innerHTML = week_number;
-  detailTimezone.innerHTML = timezone;
+  detailTimezone.innerHTML = timezone.replace(/_/, ' '); // in the city names are underlines instead of spaces
 }
 
 // fetching data

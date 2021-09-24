@@ -59,6 +59,11 @@ main::before {
   }
 }
 
+.time{
+  max-width: 100%;
+  display: inline-block;
+}
+
 .time-details {
   width: 100%;
   display: flex;
